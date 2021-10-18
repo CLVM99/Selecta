@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:selectav1/pages/home.dart';
 import 'package:selectav1/pages/servicios.dart';
 import 'package:selectav1/pages/config.dart';
+import 'package:selectav1/pages/avanzado.dart';
 
 void main() => runApp(MyApp());
 
@@ -17,6 +18,7 @@ class MyApp extends StatelessWidget {
         "/home": (BuildContext context) => Home(),
         "/servicios": (BuildContext context) => Servicios(),
         "/config": (BuildContext context) => Configuracion(),
+        "/avanzado": (BuildContext context) => Avanzado(),
       },
       initialRoute: "/home", //Rutas
     );

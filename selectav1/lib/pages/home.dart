@@ -33,9 +33,51 @@ Widget botones = (Container(
   margin: EdgeInsets.symmetric(horizontal: 20),
   alignment: Alignment.center,
   child: Row(
-    children: [guardado, avanzado],
+    children: [guardado, BotonAvanzado()],
   ),
 ));
+
+class BotonGuardado extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 100,
+      width: 180,
+      margin: const EdgeInsets.all(8.0),
+      color: Colors.amber,
+      padding: EdgeInsets.all(5),
+      child: TextButton(
+        style: TextButton.styleFrom(primary: Colors.white),
+        child: Row(
+          children: [
+            DecoratedIcon(
+              Icons.bookmark,
+              size: 50,
+              shadows: [
+                BoxShadow(
+                    offset: Offset(0.0, 1.0),
+                    color: Colors.black26,
+                    blurRadius: 15)
+              ],
+            ),
+            Text('Canciones\nGuardadas',
+                textScaleFactor: 1.6,
+                style: TextStyle(fontWeight: FontWeight.bold, shadows: [
+                  Shadow(
+                    offset: Offset(0.0, 1.0),
+                    blurRadius: 15,
+                    color: Colors.black45,
+                  )
+                ]))
+          ],
+        ),
+        onPressed: () {
+          Navigator.pushNamed(context, '/avanzado');
+        },
+      ),
+    );
+  }
+}
 
 Widget guardado = (Container(
     height: 100,
@@ -68,34 +110,48 @@ Widget guardado = (Container(
       ],
     ))));
 
-Widget avanzado = (Container(
-    height: 100,
-    width: 180,
-    margin: const EdgeInsets.all(8.0),
-    color: Colors.amber[700],
-    padding: EdgeInsets.all(5),
-    child: Center(
+// ignore: must_be_immutable
+class BotonAvanzado extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 100,
+      width: 180,
+      margin: const EdgeInsets.all(8.0),
+      color: Colors.amber[700],
+      padding: EdgeInsets.all(5),
+      child: TextButton(
+        style: TextButton.styleFrom(primary: Colors.white),
         child: Row(
-      children: [
-        DecoratedIcon(
-          Icons.music_note,
-          size: 50,
-          shadows: [
-            BoxShadow(
-                offset: Offset(0.0, 1.0), color: Colors.black26, blurRadius: 15)
+          children: [
+            DecoratedIcon(
+              Icons.music_note,
+              size: 50,
+              shadows: [
+                BoxShadow(
+                    offset: Offset(0.0, 1.0),
+                    color: Colors.black26,
+                    blurRadius: 15)
+              ],
+            ),
+            Text('Busqueda\nAvanzada',
+                textScaleFactor: 1.6,
+                style: TextStyle(fontWeight: FontWeight.bold, shadows: [
+                  Shadow(
+                    offset: Offset(0.0, 1.0),
+                    blurRadius: 15,
+                    color: Colors.black45,
+                  )
+                ]))
           ],
         ),
-        Text('Busqueda\nAvanzada',
-            textScaleFactor: 1.6,
-            style: TextStyle(fontWeight: FontWeight.bold, shadows: [
-              Shadow(
-                offset: Offset(0.0, 1.0),
-                blurRadius: 15,
-                color: Colors.black45,
-              )
-            ]))
-      ],
-    ))));
+        onPressed: () {
+          Navigator.pushNamed(context, '/avanzado');
+        },
+      ),
+    );
+  }
+}
 
 Widget novedades = (Container(
   margin: const EdgeInsets.symmetric(horizontal: 25, vertical: 5),
