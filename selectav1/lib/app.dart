@@ -15,21 +15,18 @@ Widget drawerMenu(BuildContext context) {
         title: Text('Home'),
         onTap: () {
           Navigator.pushNamed(context, '/home');
-          Navigator.pop(context);
         },
       ),
       ListTile(
         title: Text('Servicios'),
         onTap: () {
           Navigator.pushNamed(context, '/servicios');
-          Navigator.pop(context);
         },
       ),
       ListTile(
         title: Text('Configuracion'),
         onTap: () {
           Navigator.pushNamed(context, '/config');
-          Navigator.pop(context);
         },
       ),
     ],
