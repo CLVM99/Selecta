@@ -4,7 +4,7 @@ import 'package:selectav1/pages/home.dart';
 import 'package:selectav1/pages/servicios.dart';
 import 'package:selectav1/pages/config.dart';
 import 'package:selectav1/pages/avanzado.dart';
-import 'package:selectav1/pages/guardado.dart
+import 'package:selectav1/pages/guardado.dart';
 
 void main() => runApp(MyApp());
 

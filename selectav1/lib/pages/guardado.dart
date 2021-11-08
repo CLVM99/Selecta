@@ -18,14 +18,7 @@ class Guardado extends StatelessWidget {
         title: Text('Guardados'),
       ),
       body: Container(
-        margin: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-        child: Column(
-          children: [
-            Row(
-              children: [Text('Guardados')],
-            )
-          ],
-        ),
+        child: scrollGu(),
       ),
       drawer: drawerMenu(context),
       endDrawer: Ajguar(),
@@ -53,4 +46,23 @@ class Ajguar extends StatelessWidget {
       ],
     );
   }
+}
+
+Widget scrollGu() {
+  return CustomScrollView(
+    slivers: <Widget>[
+      SliverFixedExtentList(
+        itemExtent: 100,
+        delegate: SliverChildBuilderDelegate(
+          (BuildContext context, int index) {
+            return Container(
+              alignment: Alignment.center,
+              color: Colors.orange[100 * (index % 9)],
+              child: Text('List Item $index'),
+            );
+          },
+        ),
+      ),
+    ],
+  );
 }
