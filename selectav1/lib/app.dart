@@ -11,6 +11,18 @@ Widget drawerMenu(BuildContext context) {
   return ListView(
     padding: EdgeInsets.zero,
     children: [
+      DrawerHeader(
+        decoration: BoxDecoration(
+          color: Colors.black45,
+        ),
+        child: Container(
+            margin: const EdgeInsets.all(8.0),
+            padding: EdgeInsets.all(5),
+            child: Text(
+              'Menu',
+              textScaleFactor: 1.5,
+            )),
+      ),
       ListTile(
         title: Text('Home'),
         onTap: () {

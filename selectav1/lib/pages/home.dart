@@ -33,7 +33,7 @@ Widget botones = (Container(
   margin: EdgeInsets.symmetric(horizontal: 20),
   alignment: Alignment.center,
   child: Row(
-    children: [guardado, BotonAvanzado()],
+    children: [BotonGuardado(), BotonAvanzado()],
   ),
 ));
 
@@ -45,7 +45,7 @@ class BotonGuardado extends StatelessWidget {
       width: 180,
       margin: const EdgeInsets.all(8.0),
       color: Colors.amber,
-      padding: EdgeInsets.all(5),
+      padding: EdgeInsets.all(2),
       child: TextButton(
         style: TextButton.styleFrom(primary: Colors.white),
         child: Row(
@@ -72,43 +72,12 @@ class BotonGuardado extends StatelessWidget {
           ],
         ),
         onPressed: () {
-          Navigator.pushNamed(context, '/avanzado');
+          Navigator.pushNamed(context, '/guardado');
         },
       ),
     );
   }
 }
-
-Widget guardado = (Container(
-    height: 100,
-    width: 180,
-    margin: const EdgeInsets.all(8.0),
-    color: Colors.amber,
-    padding: EdgeInsets.all(5),
-    child: Center(
-        child: Row(
-      children: [
-        DecoratedIcon(
-          Icons.bookmark,
-          size: 50,
-          shadows: [
-            BoxShadow(
-                offset: Offset(1.0, 0.0), color: Colors.black26, blurRadius: 15)
-          ],
-        ),
-        Text(
-          'Canciones\nGuardadas',
-          textScaleFactor: 1.6,
-          style: TextStyle(fontWeight: FontWeight.bold, shadows: [
-            Shadow(
-              offset: Offset(1.0, 0.0),
-              blurRadius: 15,
-              color: Colors.black45,
-            )
-          ]),
-        )
-      ],
-    ))));
 
 // ignore: must_be_immutable
 class BotonAvanzado extends StatelessWidget {
