@@ -17,7 +17,7 @@ class Home extends StatelessWidget {
 
 Widget columnContent() {
   return Column(
-    children: [buscar, botones, popular, novedades],
+    children: [buscar, botones],
   );
 }
 
@@ -122,52 +122,70 @@ class BotonAvanzado extends StatelessWidget {
   }
 }
 
-Widget novedades = (Container(
-  margin: const EdgeInsets.symmetric(horizontal: 25, vertical: 5),
-  child: Stack(
-    alignment: Alignment.center,
-    children: [
-      AspectRatio(
-        aspectRatio: 16 / 9,
-        child: Image.asset(
-          'images/01.jpg',
-          fit: BoxFit.cover,
-        ),
-      ),
-      Text('Novedades',
-          style: TextStyle(fontWeight: FontWeight.bold, shadows: [
-            Shadow(
-              offset: Offset(1.0, 1.0),
-              blurRadius: 3.0,
-              color: Color.fromARGB(255, 0, 0, 0),
-            )
-          ]),
-          textScaleFactor: 2.5),
-    ],
-  ),
-));
+class Popular extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+        margin: const EdgeInsets.symmetric(horizontal: 25, vertical: 5),
+        child: TextButton(
+          child: Stack(
+            alignment: Alignment.center,
+            children: [
+              AspectRatio(
+                aspectRatio: 16 / 9,
+                child: Image.asset(
+                  'images/01.jpg',
+                  fit: BoxFit.cover,
+                ),
+              ),
+              Text('Novedades',
+                  style: TextStyle(fontWeight: FontWeight.bold, shadows: [
+                    Shadow(
+                      offset: Offset(1.0, 1.0),
+                      blurRadius: 3.0,
+                      color: Color.fromARGB(255, 0, 0, 0),
+                    )
+                  ]),
+                  textScaleFactor: 2.5),
+            ],
+          ),
+          onPressed: () {
+            Navigator.pushNamed(context, '/avanzado');
+          },
+        ));
+  }
+}
 
-Widget popular = (Container(
-  margin: const EdgeInsets.symmetric(horizontal: 25, vertical: 5),
-  child: Stack(
-    alignment: Alignment.center,
-    children: [
-      AspectRatio(
-        aspectRatio: 16 / 9,
-        child: Image.asset(
-          'images/02.jpg',
-          fit: BoxFit.cover,
-        ),
-      ),
-      Text('Popular',
-          style: TextStyle(fontWeight: FontWeight.bold, shadows: [
-            Shadow(
-              offset: Offset(1.0, 1.0),
-              blurRadius: 3.0,
-              color: Color.fromARGB(255, 0, 0, 0),
-            )
-          ]),
-          textScaleFactor: 2.5),
-    ],
-  ),
-));
+class Novedades extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+        margin: const EdgeInsets.symmetric(horizontal: 25, vertical: 5),
+        child: TextButton(
+          child: Stack(
+            alignment: Alignment.center,
+            children: [
+              AspectRatio(
+                aspectRatio: 16 / 9,
+                child: Image.asset(
+                  'images/02.jpg',
+                  fit: BoxFit.cover,
+                ),
+              ),
+              Text('Popular',
+                  style: TextStyle(fontWeight: FontWeight.bold, shadows: [
+                    Shadow(
+                      offset: Offset(1.0, 1.0),
+                      blurRadius: 3.0,
+                      color: Color.fromARGB(255, 0, 0, 0),
+                    )
+                  ]),
+                  textScaleFactor: 2.5),
+            ],
+          ),
+          onPressed: () {
+            Navigator.pushNamed(context, '/avanzado');
+          },
+        ));
+  }
+}

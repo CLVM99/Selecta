@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:selectav1/app.dart';
 
-class Avanzado extends StatelessWidget {
+class Novedades extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
