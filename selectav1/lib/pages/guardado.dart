@@ -15,7 +15,7 @@ class Guardado extends StatelessWidget {
             ),
           ),
         ],
-        title: Text('Guardados'),
+        title: Text('Guardado'),
       ),
       body: Container(
         child: scrollGu(),

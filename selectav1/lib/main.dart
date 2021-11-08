@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
         "/config": (BuildContext context) => Configuracion(),
         "/avanzado": (BuildContext context) => Avanzado(),
         "/guardado": (BuildContext context) => Guardado(),
-        "/novedades": (BuildContext context) => Novedades()
+        "/novedades": (BuildContext context) => Novedades(),
       },
       initialRoute: "/home", //Rutas
     );

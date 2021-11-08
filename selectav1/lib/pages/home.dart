@@ -17,7 +17,7 @@ class Home extends StatelessWidget {
 
 Widget columnContent() {
   return Column(
-    children: [buscar, botones],
+    children: [buscar, botones, BotonNovedades(), BotonPopular()],
   );
 }
 
@@ -122,12 +122,15 @@ class BotonAvanzado extends StatelessWidget {
   }
 }
 
-class Popular extends StatelessWidget {
+class BotonNovedades extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
         margin: const EdgeInsets.symmetric(horizontal: 25, vertical: 5),
         child: TextButton(
+          style: TextButton.styleFrom(
+            primary: Colors.white,
+          ),
           child: Stack(
             alignment: Alignment.center,
             children: [
@@ -156,12 +159,15 @@ class Popular extends StatelessWidget {
   }
 }
 
-class Novedades extends StatelessWidget {
+class BotonPopular extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
         margin: const EdgeInsets.symmetric(horizontal: 25, vertical: 5),
         child: TextButton(
+          style: TextButton.styleFrom(
+            primary: Colors.white,
+          ),
           child: Stack(
             alignment: Alignment.center,
             children: [
