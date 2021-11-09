@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:selectav1/app.dart';
-import 'package:selectav1/pages/popular.dart';
 
 class Novedades extends StatelessWidget {
   @override

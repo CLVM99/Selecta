@@ -197,7 +197,7 @@ class BotonPopular extends StatelessWidget {
             ],
           ),
           onPressed: () {
-            Navigator.pushNamed(context, '/avanzado');
+            Navigator.pushNamed(context, '/popular');
           },
         ));
   }
