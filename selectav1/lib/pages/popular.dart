@@ -1,24 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:selectav1/app.dart';
-import 'package:selectav1/pages/popular.dart';
 
-class Novedades extends StatelessWidget {
+class Popular extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Novedades'),
+        title: Text('Popular'),
       ),
       body: Container(
-        child: scrollNo(),
+        child: scrollPo(),
       ),
       drawer: drawerMenu(context),
     );
   }
 }
 
-//Scroll novedades
-Widget scrollNo() {
+//Scroll populares
+Widget scrollPo() {
   return CustomScrollView(
     slivers: <Widget>[
       SliverFixedExtentList(

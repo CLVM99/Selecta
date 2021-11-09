@@ -15,12 +15,14 @@ class Home extends StatelessWidget {
   }
 }
 
+//CUERPO
 Widget columnContent() {
   return Column(
     children: [buscar, botones, BotonNovedades(), BotonPopular()],
   );
 }
 
+//BUSCADOR
 Widget buscar = Container(
     margin: EdgeInsets.all(20),
     child: Form(
@@ -29,6 +31,7 @@ Widget buscar = Container(
           icon: Icon(Icons.search), hintText: 'Busca la cancion aqui'),
     )));
 
+//Hilera de botones
 Widget botones = (Container(
   margin: EdgeInsets.symmetric(horizontal: 20),
   alignment: Alignment.center,
@@ -37,6 +40,7 @@ Widget botones = (Container(
   ),
 ));
 
+//Boton Guardado
 class BotonGuardado extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -80,6 +84,7 @@ class BotonGuardado extends StatelessWidget {
 }
 
 // ignore: must_be_immutable
+//Boton Avanzado
 class BotonAvanzado extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -122,6 +127,7 @@ class BotonAvanzado extends StatelessWidget {
   }
 }
 
+//Boton novedades
 class BotonNovedades extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -153,12 +159,13 @@ class BotonNovedades extends StatelessWidget {
             ],
           ),
           onPressed: () {
-            Navigator.pushNamed(context, '/avanzado');
+            Navigator.pushNamed(context, '/novedades');
           },
         ));
   }
 }
 
+//Boton popular
 class BotonPopular extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
