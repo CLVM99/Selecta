@@ -24,11 +24,30 @@ Widget scrollPo() {
         itemExtent: 100,
         delegate: SliverChildBuilderDelegate(
           (BuildContext context, int index) {
-            return Container(
-              alignment: Alignment.center,
-              color: Colors.orange[100 * (index % 9)],
-              child: Text('List Item $index'),
-            );
+            return TextButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, '/info');
+                },
+                style: TextButton.styleFrom(
+                  primary: Colors.white,
+                ),
+                child: Container(
+                  alignment: Alignment.center,
+                  padding: EdgeInsets.all(15),
+                  color: Colors.orange[100 * (index % 9)],
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      Icon(Icons.music_video, size: 60),
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [Text('Cancion'), Text('Artista')],
+                      ),
+                      Text('Album/n'),
+                      Text('año')
+                    ],
+                  ),
+                ));
           },
         ),
       ),
