@@ -30,26 +30,12 @@ Widget musicData = Container(
     alignment: Alignment.topLeft,
     margin: EdgeInsets.symmetric(horizontal: 15, vertical: 10),
     child: Column(
+      mainAxisAlignment: MainAxisAlignment.start,
       children: [
         Text(
-          'Cancion',
+          'Cancion:\nAlbum:\nArtista:\nAño:\nDiscografica:',
           textScaleFactor: 1.6,
-        ),
-        Text(
-          'Album',
-          textScaleFactor: 1.6,
-        ),
-        Text(
-          'Artista',
-          textScaleFactor: 1.6,
-        ),
-        Text(
-          'Año',
-          textScaleFactor: 1.6,
-        ),
-        Text(
-          'Discografica',
-          textScaleFactor: 1.6,
+          textAlign: TextAlign.start,
         ),
       ],
     ));
