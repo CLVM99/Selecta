@@ -16,14 +16,6 @@ class Avanzado extends StatelessWidget {
   }
 }
 
-//Ajustes de busqueda
-
-Widget columnContent() {
-  return Column(
-    children: [],
-  );
-}
-
 //Scroller
 Widget scrollAv() {
   return CustomScrollView(

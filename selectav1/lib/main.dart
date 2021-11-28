@@ -7,6 +7,7 @@ import 'package:selectav1/pages/avanzado.dart';
 import 'package:selectav1/pages/guardado.dart';
 import 'package:selectav1/pages/novedades.dart';
 import 'package:selectav1/pages/popular.dart';
+import 'package:selectav1/pages/info.dart';
 
 void main() => runApp(MyApp());
 
@@ -25,6 +26,7 @@ class MyApp extends StatelessWidget {
         "/guardado": (BuildContext context) => Guardado(),
         "/novedades": (BuildContext context) => Novedades(),
         "/popular": (BuildContext context) => Popular(),
+        "/info": (BuildContext context) => Info(),
       },
       initialRoute: "/home", //Rutas
     );
