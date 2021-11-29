@@ -34,16 +34,19 @@ Widget scrollPo() {
                   primary: Colors.white, //Color de letra blanco
                 ),
                 child: Container(
+                  //Color de losc cuadros de la lista
                   margin: EdgeInsets.symmetric(horizontal: 10),
                   alignment: Alignment.center,
                   padding: EdgeInsets.all(15),
                   color: Colors.orange[100 *
                       (index % 9)], //Hacer que cada uno que cambie de color
                   child: Row(
+                    //Elementos que se van a ver dentro de la lista
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
-                      Icon(Icons.music_video, size: 60),
+                      Icon(Icons.music_video, size: 60), //agregar icono musical
                       Column(
+                        //Agregar cancion y artista
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [Text('Cancion'), Text('Artista')],
                       ),
