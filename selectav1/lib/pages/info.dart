@@ -67,6 +67,7 @@ Widget links = Container(
           ),
         ),
         Expanded(
+          //pone una imagen
           child: Image.asset(
             'images/itunes.png',
             width: imgsize,
@@ -74,6 +75,7 @@ Widget links = Container(
           ),
         ),
         Expanded(
+          //pone una imagen
           child: Image.asset(
             'images/youtube.png',
             width: imgsize,
