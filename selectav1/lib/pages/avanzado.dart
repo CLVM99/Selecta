@@ -32,7 +32,7 @@ Widget scrollAv() {
             return Container(
               alignment: Alignment.center,
               color: Colors.orange[400 + (index * 100)],
-              child: Text('grid item $index'),
+              child: Text('elemento $index'),
             );
           },
           childCount: 6,
