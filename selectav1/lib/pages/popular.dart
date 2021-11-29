@@ -23,18 +23,22 @@ Widget scrollPo() {
       SliverFixedExtentList(
         itemExtent: 100,
         delegate: SliverChildBuilderDelegate(
+          //Construir elementos en automatico
           (BuildContext context, int index) {
             return TextButton(
                 onPressed: () {
-                  Navigator.pushNamed(context, '/info');
+                  Navigator.pushNamed(
+                      context, '/info'); //Enviar a pagina de info
                 },
                 style: TextButton.styleFrom(
-                  primary: Colors.white,
+                  primary: Colors.white, //Color de letra blanco
                 ),
                 child: Container(
+                  margin: EdgeInsets.symmetric(horizontal: 10),
                   alignment: Alignment.center,
                   padding: EdgeInsets.all(15),
-                  color: Colors.orange[100 * (index % 9)],
+                  color: Colors.orange[100 *
+                      (index % 9)], //Hacer que cada uno que cambie de color
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [

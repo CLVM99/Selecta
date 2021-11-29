@@ -14,6 +14,7 @@ class Info extends StatelessWidget {
 }
 
 //CARATULA
+//Agregaria poner la caratula de un disco
 Widget coverArt = Container(
   alignment: Alignment.center,
   margin: EdgeInsets.all(20),
@@ -31,6 +32,7 @@ Widget musicData = Container(
     alignment: Alignment.topLeft,
     margin: EdgeInsets.symmetric(horizontal: 15, vertical: 10),
     child: Column(
+      //añade lo que seria la infotmacion
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
         Text(
@@ -41,9 +43,10 @@ Widget musicData = Container(
       ],
     ));
 
+//pone el tamaño de la imagen, medio flojera tener que poner los datos uno por uno
 double imgsize = 50;
 
-//ENLACES
+//ENLACES Pone imagenes que se supone que tendrian un enlace a servicios de streaming
 Widget links = Container(
     child: Column(
   children: [
@@ -52,9 +55,11 @@ Widget links = Container(
       child: Text('Enlaces'),
     ),
     Row(
+      //Hilera con los enlaces
       mainAxisSize: MainAxisSize.max,
       children: [
         Expanded(
+          //pone una imagen
           child: Image.asset(
             'images/spotify.png',
             width: imgsize,
