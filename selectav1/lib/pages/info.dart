@@ -8,7 +8,7 @@ class Info extends StatelessWidget {
           title: Text('Informacion'),
         ),
         body: Column(
-          children: [coverArt, musicData],
+          children: [coverArt, musicData, links],
         ));
   }
 }
@@ -26,6 +26,7 @@ Widget coverArt = Container(
   ),
 );
 
+//DATOS
 Widget musicData = Container(
     alignment: Alignment.topLeft,
     margin: EdgeInsets.symmetric(horizontal: 15, vertical: 10),
@@ -39,3 +40,42 @@ Widget musicData = Container(
         ),
       ],
     ));
+
+double imgsize = 50;
+
+//ENLACES
+Widget links = Container(
+    child: Column(
+  children: [
+    Container(
+      margin: EdgeInsets.all(15),
+      child: Text('Enlaces'),
+    ),
+    Row(
+      mainAxisSize: MainAxisSize.max,
+      children: [
+        Expanded(
+          child: Image.asset(
+            'images/spotify.png',
+            width: imgsize,
+            height: imgsize,
+          ),
+        ),
+        Expanded(
+          child: Image.asset(
+            'images/itunes.png',
+            width: imgsize,
+            height: imgsize,
+          ),
+        ),
+        Expanded(
+          child: Image.asset(
+            'images/youtube.png',
+            width: imgsize,
+            height: imgsize,
+          ),
+        ),
+      ],
+    ),
+  ],
+));
