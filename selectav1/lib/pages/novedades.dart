@@ -43,7 +43,7 @@ Widget scrollNo() {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [Text('Cancion'), Text('Artista')],
                       ),
-                      Text('Album/n'),
+                      Text('Album'),
                       Text('año')
                     ],
                   ),
